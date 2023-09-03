@@ -1,0 +1,80 @@
+// Create 5 Student objects using Object Literal
+const student1 = {
+  rollno: 101,
+  name: "Alice",
+  age: 20,
+  marks: [85, 90, 78],
+};
+
+const student2 = {
+  rollno: 102,
+  name: "Bob",
+  age: 21,
+  marks: [70, 95, 88],
+};
+
+const student3 = {
+  rollno: 103,
+  name: "Charlie",
+  age: 19,
+  marks: [92, 88, 76],
+};
+
+const student4 = {
+  rollno: 104,
+  name: "David",
+  age: 22,
+  marks: [78, 85, 90],
+};
+
+const student5 = {
+  rollno: 105,
+  name: "Eve",
+  age: 20,
+  marks: [85, 92, 79],
+};
+
+// Function to calculate total marks for a student
+function calculateTotalMarks(student) {
+  return student.marks.reduce((total, mark) => total + mark, 0);
+}
+
+// Function to calculate grade for a student
+function calculateGrade(student) {
+  const totalMarks = calculateTotalMarks(student);
+  const percentage = (totalMarks / (student.marks.length * 100)) * 100;
+
+  if (percentage >= 90) {
+    return "A+";
+  } else if (percentage >= 80) {
+    return "A";
+  } else if (percentage >= 70) {
+    return "B";
+  } else if (percentage >= 60) {
+    return "C";
+  } else {
+    return "D";
+  }
+}
+
+// Calculate and set total marks and grade for each student
+student1.totalMarks = calculateTotalMarks(student1);
+student1.grade = calculateGrade(student1);
+
+student2.totalMarks = calculateTotalMarks(student2);
+student2.grade = calculateGrade(student2);
+
+student3.totalMarks = calculateTotalMarks(student3);
+student3.grade = calculateGrade(student3);
+
+student4.totalMarks = calculateTotalMarks(student4);
+student4.grade = calculateGrade(student4);
+
+student5.totalMarks = calculateTotalMarks(student5);
+student5.grade = calculateGrade(student5);
+
+console.log(student1);
+console.log(student2);
+console.log(student3);
+console.log(student4);
+console.log(student5);
