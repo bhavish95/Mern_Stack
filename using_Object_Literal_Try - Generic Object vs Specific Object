@@ -78,3 +78,22 @@ console.log(student2);
 console.log(student3);
 console.log(student4);
 console.log(student5);
+
+//Creating student objects using Object Literal works fine, but it comes with some limitations and potential problems:
+
+//Code Duplication: You have to define the structure of each student object separately, leading to code duplication. This can be problematic when you have a large number of objects or need to make changes to the structure.
+
+//Scalability: If you need to create many instances of similar objects, the Object Literal approach can become unwieldy and difficult to manage as you manually create each object.
+
+//Maintenance: If you need to update the calculation logic for total marks or grade, you have to do it separately for each student object, which can lead to errors and maintenance challenges.
+
+//Code Reusability: There is no inherent code reusability since each object is defined independently. In a more complex application, this could lead to inconsistencies and increased maintenance efforts.
+
+//Readability: As the number of objects increases, the code becomes less readable and harder to manage due to the repetitive structure.
+
+
+
+
+
+
+
