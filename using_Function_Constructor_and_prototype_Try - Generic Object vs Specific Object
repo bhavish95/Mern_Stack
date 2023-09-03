@@ -56,3 +56,27 @@ console.log(student2);
 console.log(student3);
 console.log(student4);
 console.log(student5);
+
+
+//Now, let's compare the specific (Function Constructor with Prototype) and generic (Object Literal) approaches:
+//Specific (Function Constructor with Prototype):
+//Reusability: The specific approach allows you to create multiple instances of the same type (Student) with shared methods, promoting code reuse.
+//Maintenance: If you need to change the calculation logic for total marks or grade, you only need to update it in one place (the prototype method).
+//Memory Usage: The specific approach consumes less memory since prototype methods are shared among all instances of the constructor function.
+//Object Creation: Creating objects using a constructor function (new Student(...)) is more intuitive and aligns with JavaScript's object-oriented paradigm.
+
+//Generic (Object Literal):
+//Code Duplication: The Object Literal approach requires you to define the structure of each object separately, leading to code duplication.
+//Scalability: For a large number of objects, this approach becomes unwieldy and difficult to manage, as you manually create each object.
+//Maintenance: If you need to update the calculation logic, you have to do it separately for each object, which can lead to errors and maintenance challenges.
+//Code Reusability: There is no inherent code reusability since each object is defined independently.
+//Readability: As the number of objects increases, the code becomes less readable and harder to manage due to the repetitive structure.
+//Lack of Abstraction: The Object Literal approach lacks abstraction and encapsulation, which are essential concepts in object-oriented programming.
+
+//In summary, the specific approach with Function Constructor and Prototype is preferred when you want to create multiple instances of objects with shared behavior and properties, making your code more maintainable and efficient. The generic approach with Object Literal may be suitable for simple cases with a small number of objects, but it lacks the advantages of code reusability and maintainability that the specific approach offers.
+
+
+
+
+
+
