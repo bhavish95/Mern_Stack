@@ -1,0 +1,58 @@
+// Define the Student constructor function
+function Student(rollno, name, age, marks) {
+  this.rollno = rollno;
+  this.name = name;
+  this.age = age;
+  this.marks = marks;
+}
+
+// Add prototype methods to calculate total marks and grade
+Student.prototype.calculateTotalMarks = function () {
+  return this.marks.reduce((total, mark) => total + mark, 0);
+};
+
+Student.prototype.calculateGrade = function () {
+  const totalMarks = this.calculateTotalMarks();
+  const percentage = (totalMarks / (this.marks.length * 100)) * 100;
+
+  if (percentage >= 90) {
+    return "A+";
+  } else if (percentage >= 80) {
+    return "A";
+  } else if (percentage >= 70) {
+    return "B";
+  } else if (percentage >= 60) {
+    return "C";
+  } else {
+    return "D";
+  }
+};
+
+// Create 5 Student objects using the Student constructor
+const student1 = new Student(101, "Alice", 20, [85, 90, 78]);
+const student2 = new Student(102, "Bob", 21, [70, 95, 88]);
+const student3 = new Student(103, "Charlie", 19, [92, 88, 76]);
+const student4 = new Student(104, "David", 22, [78, 85, 90]);
+const student5 = new Student(105, "Eve", 20, [85, 92, 79]);
+
+// Calculate and set total marks and grade for each student
+student1.totalMarks = student1.calculateTotalMarks();
+student1.grade = student1.calculateGrade();
+
+student2.totalMarks = student2.calculateTotalMarks();
+student2.grade = student2.calculateGrade();
+
+student3.totalMarks = student3.calculateTotalMarks();
+student3.grade = student3.calculateGrade();
+
+student4.totalMarks = student4.calculateTotalMarks();
+student4.grade = student4.calculateGrade();
+
+student5.totalMarks = student5.calculateTotalMarks();
+student5.grade = student5.calculateGrade();
+
+console.log(student1);
+console.log(student2);
+console.log(student3);
+console.log(student4);
+console.log(student5);
